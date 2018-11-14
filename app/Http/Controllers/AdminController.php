@@ -62,7 +62,7 @@ class AdminController extends Controller
                     Session::put('id',$data->id);
                     Session::put('username',$data->username);
             		Session::put('role',$data->role);
-                	Session::put('login');
+                	Session::put('login', TRUE);
                     return redirect('admin/dashboard');	
             	}else if($data->role == "basic"){
                     Session::put('nama',$data->nama);
@@ -70,7 +70,7 @@ class AdminController extends Controller
                     Session::put('username',$data->username);
                     Session::put('password',$data->password);
                     Session::put('role',$data->role);
-                	Session::put('login');
+                	Session::put('login', TRUE);
                 	return redirect('user');
             	}else{
                     return back();
